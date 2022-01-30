@@ -318,6 +318,10 @@
                     this.ajaxClick.off("click");
                     this.ajaxClick.on("click", function (e) {
 
+                        if( this.ajaxClick.attr( 'ignore-dsn' ) == 'true' ) {
+                            return;
+                        }
+
                         e.preventDefault();
                         let _that = $(this),
                             url = _that.attr("href"),
