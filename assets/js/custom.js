@@ -318,7 +318,7 @@
                     this.ajaxClick.off("click");
                     this.ajaxClick.on("click", function (e) {
 
-                        if( this.ajaxClick.attr( 'ignore-dsn' ) == 'true' ) {
+                        if( this.ajaxClick && ( this.ajaxClick.attr( 'ignore-dsn' ) == 'true' ) ) {
                             return;
                         }
 
